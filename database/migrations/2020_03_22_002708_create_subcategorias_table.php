@@ -15,8 +15,8 @@ class CreateSubcategoriasTable extends Migration
     {
         Schema::create('subcategorias', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('descripcion');
+            $table->string('nombre',128);
+            $table->string('descripcion',256);
 
             // Anadimos la clave foranea con Categoria. categoria_id
             $table->unsignedInteger('categoria_id');

@@ -15,12 +15,12 @@ class CreateTiendasTable extends Migration
     {
         Schema::create('tiendas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('rif')->unique();
-            $table->string('telefono');
-            $table->text('direccion');
-            $table->string('email');
-            $table->string('logo')->default('img/logos/logo_tienda_default.svg');
+            $table->string('nombre',128);
+            $table->string('rif',56)->unique();
+            $table->string('telefono',56);
+            $table->text('direccion',256);
+            $table->string('email',128);
+            $table->string('logo',512)->default('img/logos/logo_tienda_default.svg');
             $table->timestamps();
         });
     }

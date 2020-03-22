@@ -15,16 +15,16 @@ class CreateArticulosTable extends Migration
     {
         Schema::create('articulos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('codigo');
-            $table->string('nombre');
-            $table->string('descripcion');
+            $table->string('codigo',128);
+            $table->string('nombre'128);
+            $table->string('descripcion',256);
             $table->integer('stock');
             $table->integer('punto_reorden');
             $table->float('precio', 12, 2);
             $table->float('impuesto', 8, 2)->default(0);
             $table->float('monto_impuesto', 8, 4);
             $table->float('monto_total', 12, 2);
-            $table->string('url_foto')->default('img/fotos/articulo_tienda_default.png');
+            $table->string('url_foto',512)->default('img/fotos/articulo_tienda_default.png');
 
             // Anadimos la clave foranea con Tienda. tienda_id
             $table->integer('tienda_id')->unsigned();
