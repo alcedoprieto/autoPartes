@@ -14,7 +14,13 @@ class CreateTiendasTable extends Migration
     public function up()
     {
         Schema::create('tiendas', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->string('nombre');
+            $table->string('rif')->unique();
+            $table->string('telefono');
+            $table->text('direccion');
+            $table->string('email');
+            $table->string('logo')->default('img/logos/logo_tienda_default.svg');
             $table->timestamps();
         });
     }

@@ -14,7 +14,13 @@ class CreateSubcategoriasTable extends Migration
     public function up()
     {
         Schema::create('subcategorias', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->string('nombre');
+            $table->string('descripcion');
+
+            // Anadimos la clave foranea con Categoria. categoria_id
+            $table->unsignedInteger('categoria_id');
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
             $table->timestamps();
         });
     }
