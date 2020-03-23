@@ -24,6 +24,7 @@ class CreateArticulosTable extends Migration
             $table->float('impuesto', 8, 2)->default(0);
             $table->float('monto_impuesto', 8, 4);
             $table->float('monto_total', 12, 2);
+            $table->string('moneda',56);
             $table->string('url_foto',512)->default('img/fotos/articulo_tienda_default.png');
 
             // Anadimos la clave foranea con Tienda. tienda_id

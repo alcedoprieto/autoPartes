@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('excelDemo', 'ExcelController@create');
+Route::post('export', 'ExcelController@export');
+Route::post('import/', 'ExcelController@import');
