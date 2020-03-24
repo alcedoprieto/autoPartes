@@ -6,11 +6,16 @@ use App\Exports\ExcelExport;
 use App\Imports\ExcelImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
+use Prestashop;
 
 class ExcelController extends Controller
 {
     public function create() 
     {
+        //$opt['resource'] = 'products';
+        $opt['url'] = 'http://mundoyeti.local/api/products/113';
+        $xml=Prestashop::get($opt);
+        dd($xml);
         return view('excel');
     }
     

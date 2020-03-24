@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39c7b367982155678f1696060a045ab6",
+    "content-hash": "3f760f6406a95d5d5f6eebf21241179a",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1517,6 +1517,53 @@
                 "type"
             ],
             "time": "2020-03-21T18:07:53+00:00"
+        },
+        {
+            "name": "protechstudio/laravel-prestashop-webservice",
+            "version": "3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Silentscripter/laravel-prestashop-webservice.git",
+                "reference": "cfff73998d6e1311b57e51fe11b74bd205719879"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Silentscripter/laravel-prestashop-webservice/zipball/cfff73998d6e1311b57e51fe11b74bd205719879",
+                "reference": "cfff73998d6e1311b57e51fe11b74bd205719879",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.5",
+                "squizlabs/php_codesniffer": "^3.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Protechstudio\\PrestashopWebService\\PrestashopWebServiceProvider"
+                    ],
+                    "aliases": {
+                        "Prestashop": "Protechstudio\\PrestashopWebService\\PrestashopWebServiceFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Protechstudio\\PrestashopWebService\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vito Laera",
+                    "email": "vito.laera@protechstudio.it"
+                }
+            ],
+            "description": "Laravel 5 wrapper for Prestashop Web Service Library",
+            "time": "2019-05-19T20:59:27+00:00"
         },
         {
             "name": "psr/container",
