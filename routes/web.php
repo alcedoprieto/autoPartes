@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('excelDemo', 'ExcelController@create');
 Route::post('export', 'ExcelController@export');
 Route::post('import/', 'ExcelController@import');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
