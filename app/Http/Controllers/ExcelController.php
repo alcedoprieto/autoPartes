@@ -13,9 +13,9 @@ class ExcelController extends Controller
     public function create() 
     {
         //$opt['resource'] = 'products';
-        $opt['url'] = 'http://mundoyeti.local/api/products/113';
-        $xml=Prestashop::get($opt);
-        dd($xml);
+        //$opt['url'] = 'http://mundoyeti.local/api/products/113';
+        //$xml=Prestashop::get($opt);
+        //dd($xml);
         return view('excel');
     }
     
@@ -34,5 +34,10 @@ class ExcelController extends Controller
         Excel::import(new ExcelImport, request()->file('fileToUpload'));
         
         return back()->with('success', 'Excel Imported, Download to see the imported data.');
+    }
+
+    public function json() 
+    {
+        return view('excelJson');
     }
 }

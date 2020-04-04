@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('excelDemo', 'ExcelController@create');
+Route::get('excelJson', 'ExcelController@json');
 Route::post('export', 'ExcelController@export');
 Route::post('import/', 'ExcelController@import');
 Auth::routes();
